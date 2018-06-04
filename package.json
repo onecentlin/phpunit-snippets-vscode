@@ -2,7 +2,7 @@
     "name": "phpunit-snippets",
     "displayName": "PHPUnit Snippets",
     "description": "PHPUnit snippets support for Visual Studio Code",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "onecentlin",
     "engines": {
         "vscode": "^1.20.0"
