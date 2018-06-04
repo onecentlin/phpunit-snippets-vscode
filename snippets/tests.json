@@ -1,0 +1,55 @@
+{
+    "TestCase": {
+        "prefix": "testCase",
+        "body": [
+            "use PHPUnit\\Framework\\TestCase;\n",
+            "/**",
+            " * ${1:ClassName}Test",
+            " * @group ${2:group}",
+            " */",
+            "class ${1:ClassName}Test extends TestCase\n{",
+            "    ${3:// Test}",
+            "}\n"
+        ],
+        "description": "Create TestCase Class"
+    },
+    "setUp": {
+        "prefix": "setUp",
+        "body": ["public function setUp()\n{\n\n}\n"],
+        "description": "setUp()"
+    },
+    "tearDown": {
+        "prefix": "tearDown",
+        "body": ["public function tearDown()\n{\n\n}\n"],
+        "description": "tearDown()"
+    },
+    "TestFunction": {
+        "prefix": "testFunction",
+        "body": [
+            "/** @test */",
+            "public function ${1:test_}$2()",
+            "{",
+            "    // arrange\n    ",
+            "    // act\n    ",
+            "    // assert\n    ",
+            "}\n"
+        ],
+        "description": "Create test function"
+    },
+    "TestException": {
+        "prefix": "testException",
+        "body": [
+            "/** ",
+            " * @test",
+            " * @expectedException  ${3:exception}",
+            " */",
+            "public function ${1:test_}$2()",
+            "{",
+            "    // arrange\n    ",
+            "    // act\n    ",
+            "    // assert\n    ",
+            "}\n"
+        ],
+        "description": "Create test function with @expectedException"
+    }
+}

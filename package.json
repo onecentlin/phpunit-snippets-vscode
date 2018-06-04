@@ -1,0 +1,34 @@
+{
+    "name": "phpunit-snippets",
+    "displayName": "PHPUnit Snippets",
+    "description": "PHPUnit snippets support for Visual Studio Code",
+    "version": "0.0.1",
+    "publisher": "onecentlin",
+    "engines": {
+        "vscode": "^1.20.0"
+    },
+    "keywords": [
+        "phpunit",
+        "testing",
+        "snippet"
+    ],
+    "galleryBanner": {
+        "color": "#505E9B",
+        "theme": "dark"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "php",
+                "path": "./snippets/snippets.json"
+            },
+            {
+                "language": "php",
+                "path": "./snippets/tests.json"
+            }
+        ]
+    }
+}
