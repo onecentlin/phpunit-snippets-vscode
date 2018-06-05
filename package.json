@@ -2,8 +2,21 @@
     "name": "phpunit-snippets",
     "displayName": "PHPUnit Snippets",
     "description": "PHPUnit snippets support for Visual Studio Code",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "publisher": "onecentlin",
+    "author" : {
+        "name": "Winnie Lin",
+        "email": "onecentlin@gmail.com",
+        "url": "https://devmanna.blogspot.com"
+    },
+    "homepage": "https://github.com/onecentlin/phpunit-snippets-vscode",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/onecentlin/phpunit-snippets-vscode.git"
+    },
+    "bugs": {
+        "url": "https://github.com/onecentlin/phpunit-snippets-vscode/issues"
+    },
     "engines": {
         "vscode": "^1.20.0"
     },
@@ -12,6 +25,7 @@
         "testing",
         "snippet"
     ],
+    "icon": "images/icon.png",
     "galleryBanner": {
         "color": "#505E9B",
         "theme": "dark"
