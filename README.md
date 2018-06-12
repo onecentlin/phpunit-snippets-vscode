@@ -8,7 +8,7 @@ PHPUnit assertion and test snippets support for Visual Studio Code.
 
 Start with `assert:` and follows support assertion.
 
-For example: Type `assert:Equals` trigger with tab key, it produces `$this->assertEquals($expeced, $actual);` snippet for you.
+For example: Type `assert:Equals` trigger with tab key, it produces `$this->assertEquals($expected, $actual);` snippet for you.
 
 | Trigger        | Snippet                         |
 |----------------|---------------------------------|
@@ -61,7 +61,9 @@ For example: Type `assert:Equals` trigger with tab key, it produces `$this->asse
 
 ### Test Snippets
 
-Trigger: `testCase`
+Start with `pu:` and follows support code completion.
+
+Trigger: `pu:testCase`
 
 ```php
 use PHPUnit\Framework\TestCase;
@@ -85,7 +87,7 @@ class ClassNameTest extends TestCase
 }
 ```
 
-Trigger: `setUp`
+Trigger: `pu:setUp`
 
 ```php
 public function setUp()
@@ -94,7 +96,7 @@ public function setUp()
 }
 ```
 
-Trigger: `tearDown`
+Trigger: `pu:tearDown`
 
 ```php
 public function tearDown()
@@ -103,7 +105,7 @@ public function tearDown()
 }
 ```
 
-Trigger: `testFunction`
+Trigger: `pu:testFunction`
 
 ```php
 /** @test */
@@ -118,7 +120,7 @@ public function test_()
 }
 ```
 
-Trigger: `testException`
+Trigger: `pu:testException`
 
 ```php
 /** 
@@ -137,4 +139,4 @@ public function test_()
 ```
 
 
-**Enjoy!!**
+**Enjoy Unit Testing!!**
