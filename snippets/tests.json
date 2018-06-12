@@ -1,6 +1,6 @@
 {
     "TestCase": {
-        "prefix": "testCase",
+        "prefix": "pu:testCase",
         "body": [
             "use PHPUnit\\Framework\\TestCase;\n",
             "/**",
@@ -14,40 +14,56 @@
         "description": "Create TestCase Class"
     },
     "setUp": {
-        "prefix": "setUp",
-        "body": ["public function setUp()\n{\n\n}\n"],
+        "prefix": "pu:setUp",
+        "body": ["public function setUp()\n{\n    $1\n}\n"],
         "description": "setUp()"
     },
     "tearDown": {
-        "prefix": "tearDown",
-        "body": ["public function tearDown()\n{\n\n}\n"],
+        "prefix": "pu:tearDown",
+        "body": ["public function tearDown()\n{\n    $1\n}\n"],
         "description": "tearDown()"
     },
     "TestFunction": {
-        "prefix": "testFunction",
+        "prefix": "pu:testFunction",
         "body": [
             "/** @test */",
-            "public function ${1:test_}$2()",
+            "public function ${1:test_}${2:function}()",
             "{",
-            "    // arrange\n    ",
-            "    // act\n    ",
-            "    // assert\n    ",
+            "    // arrange\n    $3",
+            "    // act\n    $4",
+            "    // assert\n    $5",
             "}\n"
         ],
         "description": "Create test function"
     },
+    "TestDoxFunction": {
+        "prefix": "pu:testDoxFunction",
+        "body": [
+            "/** ",
+            " * @test",
+            " * @testdox  ${3:description}",
+            " */",
+            "public function ${1:test_}${2:function}()",
+            "{",
+            "    // arrange\n    $4",
+            "    // act\n    $5",
+            "    // assert\n    $6",
+            "}\n"
+        ],
+        "description": "Create test function with @testdox"
+    },
     "TestException": {
-        "prefix": "testException",
+        "prefix": "pu:testException",
         "body": [
             "/** ",
             " * @test",
             " * @expectedException  ${3:exception}",
             " */",
-            "public function ${1:test_}$2()",
+            "public function ${1:test_}${2:function}()",
             "{",
-            "    // arrange\n    ",
-            "    // act\n    ",
-            "    // assert\n    ",
+            "    // arrange\n    $4",
+            "    // act\n    $5",
+            "    // assert\n    $6",
             "}\n"
         ],
         "description": "Create test function with @expectedException"
