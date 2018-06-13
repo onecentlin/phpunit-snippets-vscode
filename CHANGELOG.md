@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## [0.3.0] - 2018-06-13
+### Added
+- Demo screenshots
+- Incomplete and Skipped snippets, trigger started with `mark:`
+- Exception snippets, trigger started with `exp:`  
+### Changed
+- Test function format
+
 ## [0.2.0] - 2018-06-13
 ### Changed
 - Code completion trigger started with `pu:`

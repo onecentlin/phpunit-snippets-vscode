@@ -9,7 +9,7 @@
             " */",
             "class ${1:ClassName}Test extends TestCase\n{",
             "    /** @test */",
-            "    public function ${3:test_}${4:function}",
+            "    public function ${3:test_}${4:function}()",
             "    {",
             "        ${5:// Test}",    
             "    }\n",
