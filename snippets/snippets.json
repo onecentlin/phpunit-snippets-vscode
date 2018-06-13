@@ -1,4 +1,6 @@
 {
+    /* Assertions */
+    
     "assertArrayHasKey" : {
         "prefix": "assert:ArrayHasKey",
         "body": "\\$this->assertArrayHasKey($${1:key}, $${2:array});",
@@ -274,5 +276,48 @@
         "body": "\\$this->assertXmlStringEqualsXmlString($${1:expectedXml}, $${2:actualXml});",
         "description": "assertXmlStringEqualsXmlString(string $expectedXml, string $actualXml[, string $message = ''])",
         "scope": "source.php"
+    },
+
+    /* Incomplete & Skipped */
+
+    "markTestIncomplete" : {
+        "prefix": "mark:TestIncomplete",
+        "body": "\\$this->markTestIncomplete(${1:message});",
+        "description": "markTestIncomplete([string $message = ''])",
+        "scope": "source.php"
+    },
+    "markTestSkipped" : {
+        "prefix": "mark:TestSkipped",
+        "body": "\\$this->markTestSkipped(${1:message});",
+        "description": "markTestSkipped([string $message = ''])",
+        "scope": "source.php"
+    },
+
+    /* Exceptions */
+
+    "expectException" : {
+        "prefix": "exp:Exception",
+        "body": "\\$this->expectException(${1:Exception::class});",
+        "description": "expectException(ClassName)",
+        "scope": "source.php"
+    },
+    "expectExceptionCode" : {
+        "prefix": "exp:ExceptionCode",
+        "body": "\\$this->expectExceptionCode(${1:ClassName::CONST});",
+        "description": "expectExceptionCode(ClassName::CONST)",
+        "scope": "source.php"
+    },
+    "expectExceptionMessage" : {
+        "prefix": "exp:ExceptionMessage",
+        "body": "\\$this->expectExceptionMessage(${1:message});",
+        "description": "expectExceptionMessage(string $message)",
+        "scope": "source.php"
+    },
+    "expectExceptionMessageRegExp" : {
+        "prefix": "exp:ExceptionMessageRegExp",
+        "body": "\\$this->expectExceptionMessageRegExp(/$1/);",
+        "description": "expectExceptionMessageRegExp(/RegExp/)",
+        "scope": "source.php"
     }
+
 }
