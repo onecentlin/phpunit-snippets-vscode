@@ -8,19 +8,23 @@
             " * @group ${2:group}",
             " */",
             "class ${1:ClassName}Test extends TestCase\n{",
-            "    ${3:// Test}",
+            "    /** @test */",
+            "    public function ${3:test_}${4:function}",
+            "    {",
+            "        ${5:// Test}",    
+            "    }\n",
             "}\n"
         ],
         "description": "Create TestCase Class"
     },
     "setUp": {
         "prefix": "pu:setUp",
-        "body": ["public function setUp()\n{\n    $1\n}\n"],
+        "body": ["public function setUp()\n{\n    ${1:// setup}\n}\n"],
         "description": "setUp()"
     },
     "tearDown": {
         "prefix": "pu:tearDown",
-        "body": ["public function tearDown()\n{\n    $1\n}\n"],
+        "body": ["public function tearDown()\n{\n    ${1:// unset}\n}\n"],
         "description": "tearDown()"
     },
     "TestFunction": {
@@ -29,9 +33,7 @@
             "/** @test */",
             "public function ${1:test_}${2:function}()",
             "{",
-            "    // arrange\n    $3",
-            "    // act\n    $4",
-            "    // assert\n    $5",
+            "    ${3:// Test}",
             "}\n"
         ],
         "description": "Create test function"
@@ -45,9 +47,7 @@
             " */",
             "public function ${1:test_}${2:function}()",
             "{",
-            "    // arrange\n    $4",
-            "    // act\n    $5",
-            "    // assert\n    $6",
+            "    ${4:// Test}",
             "}\n"
         ],
         "description": "Create test function with @testdox"
@@ -61,9 +61,7 @@
             " */",
             "public function ${1:test_}${2:function}()",
             "{",
-            "    // arrange\n    $4",
-            "    // act\n    $5",
-            "    // assert\n    $6",
+            "    ${4:// Test}",
             "}\n"
         ],
         "description": "Create test function with @expectedException"
