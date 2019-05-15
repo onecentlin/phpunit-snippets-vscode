@@ -16,7 +16,7 @@
     "assertArraySubset" : {
         "prefix": "assert:ArraySubset",
         "body": "\\$this->assertArraySubset($${1:subset}, $${2:array});",
-        "description": "assertArraySubset(array $subset, array $array[, bool $strict = '', string $message = ''])",
+        "description": "assertArraySubset(array $subset, array $array[, bool $strict = '', string $message = '']) (deprecated in PHPUnit 8)",
         "scope": "source.php"
     },
     "assertClassHasStaticAttribute" : {
@@ -142,9 +142,77 @@
     "assertInternalType" : {
         "prefix": "assert:InternalType",
         "body": "\\$this->assertInternalType($${1:expected}, $${2:actual});",
-        "description": "assertInternalType($expected, $actual[, $message = ''])",
+        "description": "assertInternalType($expected, $actual[, $message = '']) (deprecated in PHPUnit 8)",
         "scope": "source.php"
     },
+
+    "assertIsArray": {
+        "prefix": "assert:IsArray",
+        "body": "\\$this->assertIsArray($${1:actual});",
+        "description": "assertIsArray($actual[, $message = ''])",
+        "scope": "source.php"
+    },
+    "assertIsBool": {
+        "prefix": "assert:IsBool",
+        "body": "\\$this->assertIsBool($${1:actual});",
+        "description": "assertIsBool($actual[, $message = ''])",
+        "scope": "source.php"
+    },
+    "assertIsCallable": {
+        "prefix": "assert:IsCallable",
+        "body": "\\$this->assertIsCallable($${1:actual});",
+        "description": "assertIsCallable($actual[, $message = ''])",
+        "scope": "source.php"
+    },
+    "assertIsFloat": {
+        "prefix": "assert:IsFloat",
+        "body": "\\$this->assertIsFloat($${1:actual});",
+        "description": "assertIsFloat($actual[, $message = ''])",
+        "scope": "source.php"
+    },
+    "assertIsInt": {
+        "prefix": "assert:IsInt",
+        "body": "\\$this->assertIsInt($${1:actual});",
+        "description": "assertIsInt($actual[, $message = ''])",
+        "scope": "source.php"
+    },
+    "assertIsIterable": {
+        "prefix": "assert:IsIterable",
+        "body": "\\$this->assertIsIterable($${1:actual});",
+        "description": "assertIsIterable($actual[, $message = ''])",
+        "scope": "source.php"
+    },
+    "assertIsNumeric": {
+        "prefix": "assert:IsNumeric",
+        "body": "\\$this->assertIsNumeric($${1:actual});",
+        "description": "assertIsNumeric($actual[, $message = ''])",
+        "scope": "source.php"
+    },
+    "assertIsObject": {
+        "prefix": "assert:IsObject",
+        "body": "\\$this->assertIsObject($${1:actual});",
+        "description": "assertIsObject($actual[, $message = ''])",
+        "scope": "source.php"
+    },
+    "assertIsResource": {
+        "prefix": "assert:IsResource",
+        "body": "\\$this->assertIsResource($${1:actual});",
+        "description": "assertIsResource($actual[, $message = ''])",
+        "scope": "source.php"
+    },
+    "assertIsScalar": {
+        "prefix": "assert:IsScalar",
+        "body": "\\$this->assertIsScalar($${1:actual});",
+        "description": "assertIsScalar($actual[, $message = ''])",
+        "scope": "source.php"
+    },
+    "assertIsString": {
+        "prefix": "assert:IsString",
+        "body": "\\$this->assertIsString($${1:actual});",
+        "description": "assertIsString($actual[, $message = ''])",
+        "scope": "source.php"
+    },
+
     "assertIsReadable" : {
         "prefix": "assert:IsReadable",
         "body": "\\$this->assertIsReadable($${1:filename});",
