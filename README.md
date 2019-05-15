@@ -18,7 +18,7 @@ For example: Type `assert:Equals` trigger with tab key, it produces `$this->asse
 |------------------------------------|---------------------------------------------|
 | assert:ArrayHasKey                 |  $this->assertArrayHasKey()                 |
 | assert:ClassHasAttribute           |  $this->assertClassHasAttribute()           |
-| assert:ArraySubset                 |  $this->assertArraySubset()                 |
+| assert:ArraySubset <span style="color: red;">(deprecated in PHPUnit 8)</span>    |  $this->assertArraySubset() |
 | assert:ClassHasStaticAttribute     |  $this->assertClassHasStaticAttribute()     |
 | assert:Contains                    |  $this->assertContains()                    |
 | assert:ContainsOnly                |  $this->assertContainsOnly()                |
@@ -39,7 +39,18 @@ For example: Type `assert:Equals` trigger with tab key, it produces `$this->asse
 | assert:GreaterThanOrEqual          |  $this->assertGreaterThanOrEqual()          |
 | assert:Infinite                    |  $this->assertInfinite()                    |
 | assert:InstanceOf                  |  $this->assertInstanceOf()                  |
-| assert:InternalType                |  $this->assertInternalType()                |
+| assert:InternalType <span style="color: red;">(deprecated in PHPUnit 8)</span>   |  $this->assertInternalType() |
+| assert:IsArray                     |  $this->assertIsArray()                     |
+| assert:IsBool                      |  $this->assertIsBool()                      |
+| assert:IsCallable                  |  $this->assertIsCallable()                  |
+| assert:IsFloat                     |  $this->assertIsFlat()                      |
+| assert:IsInt                       |  $this->assertIsInt()                       |
+| assert:IsIterable                  |  $this->assertIsIterable()                  |
+| assert:IsNumeric                   |  $this->assertIsNumeric()                   |
+| assert:IsObject                    |  $this->assertIsObject()                    |
+| assert:IsResource                  |  $this->assertIsResource()                  |
+| assert:IsScalar                    |  $this->assertIsScalar()                    |
+| assert:IsString                    |  $this->assertIsString()                    |
 | assert:IsReadable                  |  $this->assertIsReadable()                  |
 | assert:IsWritable                  |  $this->assertIsWritable()                  |
 | assert:JsonFileEqualsJsonFile      |  $this->assertJsonFileEqualsJsonFile()      |
@@ -79,18 +90,23 @@ For example: Type `assert:Equals` trigger with tab key, it produces `$this->asse
 | exp:ExceptionMessage       | $this->expectExceptionMessage()       |
 | exp:ExceptionMessageRegExp | $this->expectExceptionMessageRegExp() |
 
-### Test Snippets
+### Test and Fixture Snippets
 
 Start with `pu:` and follows support code completion.
 
 | Trigger                    | Snippet                                       |
 |----------------------------|-----------------------------------------------|
 | pu:testCase                | Create basic test case class                  | 
-| pu:setUp                   | setUp()                                       |
-| pu:tearDown                | tearDown()                                    |
 | pu:testFunction            | Create base test function                     |
 | pu:testDoxFunction         | Create test function with @testdox annotation |
-| pu:testException           | Create test function with @expectedException  |
+| pu:testException  <span style="color: red;">(deprecated in PHPUnit 8)</span> | Create test function with @expectedException  |
+| pu:assertPreConditions     | assertPreConditions(): void                   |
+| pu:assertPostConditions    | assertPostConditions(): void                  |
+| pu:setUpBeforeClass        | setUpBeforeClass(): void                      |
+| pu:setUp                   | setUp(): void                                 |
+| pu:tearDown                | tearDown(): void                              |
+| pu:tearDownAfterClass      | tearDownAfterClass(): void                    |
+| pu:onNotSuccessfulTest     | onNotSuccessfulTest(): void                   |
 
 #### Examples
 
@@ -116,7 +132,7 @@ class ClassNameTest extends TestCase
 Trigger: `pu:setUp`
 
 ```php
-public function setUp()
+public function setUp(): void
 {
     // setup
 }
@@ -125,7 +141,7 @@ public function setUp()
 Trigger: `pu:tearDown`
 
 ```php
-public function tearDown()
+public function tearDown(): void
 {
     // unset
 }
