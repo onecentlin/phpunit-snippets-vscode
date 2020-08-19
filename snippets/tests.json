@@ -11,7 +11,7 @@
             "    /** @test */",
             "    public function ${3:test_}${4:function}()",
             "    {",
-            "        ${5:// Test}",    
+            "        ${5:// Test}",
             "    }\n",
             "}\n"
         ],
@@ -76,7 +76,7 @@
     },
     "setUp": {
         "prefix": "pu:setUp",
-        "body": ["protected function setUp(): void\n{\n    ${1:// code}\n}\n"],
+        "body": ["protected function setUp(): void\n{\n  parent::setUp();\n\n  ${1:// code}\n}\n"],
         "description": "setUp()"
     },
     "tearDown": {
