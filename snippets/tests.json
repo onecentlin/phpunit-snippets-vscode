@@ -76,7 +76,7 @@
     },
     "setUp": {
         "prefix": "pu:setUp",
-        "body": ["protected function setUp(): void\n{\n  parent::setUp();\n\n  ${1:// code}\n}\n"],
+        "body": ["protected function setUp(): void\n{\n    parent::setUp()\n\n    ${1:// code}\n}\n"],
         "description": "setUp()"
     },
     "tearDown": {
