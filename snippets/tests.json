@@ -61,37 +61,73 @@
 
     "assertPreConditions": {
         "prefix": "pu:assertPreConditions",
-        "body": ["protected function assertPreConditions(): void\n{\n    ${1:// code}\n}\n"],
+        "body": [
+            "protected function assertPreConditions(): void",
+            "{",
+            "    ${1:// code}",
+            "}\n"
+        ],
         "description": "assertPreConditions()"
     },
     "assertPostConditions": {
         "prefix": "pu:assertPostConditions",
-        "body": ["protected function assertPostConditions(): void\n{\n    ${1:// code}\n}\n"],
+        "body": [
+            "protected function assertPostConditions(): void",
+            "{",
+            "    ${1:// code}",
+            "}\n"
+        ],
         "description": "assertPostConditions()"
     },
     "setUpBeforeClass": {
         "prefix": "pu:setUpBeforeClass",
-        "body": ["public static function setUpBeforeClass(): void\n{\n    ${1:// code}\n}\n"],
+        "body": [
+            "public static function setUpBeforeClass(): void",
+            "{",
+            "    ${1:// code}",
+            "}\n"
+        ],
         "description": "setUpBeforeClass()"
     },
     "setUp": {
         "prefix": "pu:setUp",
-        "body": ["protected function setUp(): void\n{\n    parent::setUp()\n\n    ${1:// code}\n}\n"],
+        "body": [
+            "protected function setUp(): void",
+            "{",
+            "    parent::setUp();\n",
+            "    ${1:// code}",
+            "}\n"
+        ],
         "description": "setUp()"
     },
     "tearDown": {
         "prefix": "pu:tearDown",
-        "body": ["protected function tearDown(): void\n{\n    ${1:// code}\n}\n"],
+        "body": [
+            "protected function tearDown(): void",
+            "{",
+            "    ${1:// code}",
+            "}\n"
+        ],
         "description": "tearDown()"
     },
     "tearDownAfterClass": {
         "prefix": "pu:tearDownAfterClass",
-        "body": ["public static function tearDownAfterClass(): void\n{\n    ${1:// code}\n}\n"],
+        "body": [
+            "public static function tearDownAfterClass(): void",
+            "{",
+            "    ${1:// code}",
+            "}\n"
+        ],
         "description": "tearDownAfterClass()"
     },
     "onNotSuccessfulTest": {
         "prefix": "pu:onNotSuccessfulTest",
-        "body": ["protected function onNotSuccessfulTest(): void\n{\n    ${1:// code}\n}\n"],
+        "body": [
+            "protected function onNotSuccessfulTest(): void",
+            "{",
+            "    ${1:// code}",
+            "}\n"
+        ],
         "description": "onNotSuccessfulTest()"
     }
 }
