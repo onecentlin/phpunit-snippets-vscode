@@ -1,6 +1,9 @@
 # Change Log
 
-## [Unreleased]
+## [1.1.0] - 2020-09-09
+
+- Update `pu:setUp` snippet ([@IpelaTech](https://github.com/IpelaTech) - [PR #1](https://github.com/onecentlin/phpunit-snippets-vscode/pull/1))
+- Update snippets
 
 ## [1.0.0] - 2019-05-15
 ### Added

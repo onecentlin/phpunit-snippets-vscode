@@ -134,6 +134,8 @@ Trigger: `pu:setUp`
 ```php
 public function setUp(): void
 {
+    parent::setUp();
+    
     // setup
 }
 ```

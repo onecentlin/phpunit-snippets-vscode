@@ -2,7 +2,7 @@
     "name": "phpunit-snippets",
     "displayName": "PHPUnit Snippets",
     "description": "PHPUnit snippets support for Visual Studio Code",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "publisher": "onecentlin",
     "author": {
         "name": "Winnie Lin",
@@ -34,7 +34,8 @@
         "Snippets"
     ],
     "contributes": {
-        "snippets": [{
+        "snippets": [
+            {
                 "language": "php",
                 "path": "./snippets/snippets.json"
             },
